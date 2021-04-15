@@ -1,0 +1,143 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local GameDetection = Instance.new("ScreenGui")
+local GameDetectionHolder = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local GameDetectionHead = Instance.new("TextLabel")
+local GameDetectionSeperate = Instance.new("Frame")
+local DetectingGame = Instance.new("Frame")
+local DetectingGameDetect = Instance.new("TextLabel")
+local GameName = Instance.new("Frame")
+local GameName_2 = Instance.new("TextLabel")
+
+--Properties:
+
+GameDetection.Name = "GameDetection"
+GameDetection.Parent = game.CoreGui
+GameDetection.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GameDetectionHolder.Name = "GameDetectionHolder"
+GameDetectionHolder.Parent = GameDetection
+GameDetectionHolder.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+GameDetectionHolder.Position = UDim2.new(0.409227699, 0, 0.400369018, 0)
+GameDetectionHolder.Size = UDim2.new(0, 180, 0, 108)
+
+UICorner.Parent = GameDetectionHolder
+
+GameDetectionHead.Name = "GameDetectionHead"
+GameDetectionHead.Parent = GameDetectionHolder
+GameDetectionHead.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameDetectionHead.BackgroundTransparency = 1.000
+GameDetectionHead.Size = UDim2.new(0, 178, 0, 27)
+GameDetectionHead.Font = Enum.Font.SourceSansBold
+GameDetectionHead.Text = "Yuri Hub"
+GameDetectionHead.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameDetectionHead.TextSize = 18.000
+
+GameDetectionSeperate.Name = "GameDetectionSeperate"
+GameDetectionSeperate.Parent = GameDetectionHolder
+GameDetectionSeperate.BackgroundColor3 = Color3.fromRGB(175, 175, 175)
+GameDetectionSeperate.BorderSizePixel = 0
+GameDetectionSeperate.Position = UDim2.new(0, 0, 0.240740746, 0)
+GameDetectionSeperate.Size = UDim2.new(0, 180, 0, 2)
+
+DetectingGame.Name = "DetectingGame"
+DetectingGame.Parent = GameDetection
+DetectingGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DetectingGame.BackgroundTransparency = 1.000
+DetectingGame.Position = UDim2.new(0.409227669, 0, 0.452029526, 0)
+DetectingGame.Size = UDim2.new(0, 178, 0, 30)
+
+DetectingGameDetect.Name = "DetectingGameDetect"
+DetectingGameDetect.Parent = DetectingGame
+DetectingGameDetect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DetectingGameDetect.BackgroundTransparency = 1.000
+DetectingGameDetect.BorderSizePixel = 0
+DetectingGameDetect.Position = UDim2.new(0, 0, -5.44956777e-07, 0)
+DetectingGameDetect.Size = UDim2.new(0, 178, 0, 28)
+DetectingGameDetect.Font = Enum.Font.SourceSansSemibold
+DetectingGameDetect.Text = ""
+DetectingGameDetect.TextColor3 = Color3.fromRGB(255, 255, 255)
+DetectingGameDetect.TextSize = 18.000
+
+GameName.Name = "GameName"
+GameName.Parent = GameDetection
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(0.409227669, 0, 0.50922507, 0)
+GameName.Size = UDim2.new(0, 178, 0, 30)
+
+GameName_2.Name = "GameName"
+GameName_2.Parent = GameName
+GameName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName_2.BackgroundTransparency = 1.000
+GameName_2.BorderSizePixel = 0
+GameName_2.Position = UDim2.new(0, 0, -1.01725266e-06, 0)
+GameName_2.Size = UDim2.new(0, 178, 0, 31)
+GameName_2.Font = Enum.Font.SourceSansSemibold
+GameName_2.Text = ""
+GameName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameName_2.TextSize = 18.000
+
+
+-- Misc
+
+local textlabel = DetectingGameDetect
+
+
+local function typewrite(object,text)
+	for i = 1, #text,1 do
+		object.Text = string.sub(text, 1, i)
+
+		wait(0.1)
+	end
+end
+
+typewrite(textlabel, "Detecting Game...")
+
+-- Game Detection 
+
+
+if game.PlaceId == 2986677229 then
+	GameName:TweenSize(UDim2.new(0, 178, 0, 31), "Out", "Quint", 0.5)
+
+	local gamedetected = GameName_2
+
+
+	local function typewrite(object,text)
+		for i = 1, #text,1 do
+			object.Text = string.sub(text, 1, i)
+
+			wait(0.1)
+		end
+	end
+
+	typewrite(gamedetected, "Game Detected ! (Giant Simulator)")
+	wait(3)
+	GameDetection:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Nexkxs/YuriGiantSim/main/GiantSimulatorBigGay", true))()
+end
+
+
+if game.PlaceId == 2788229376 then
+	GameName:TweenSize(UDim2.new(0, 178, 0, 31), "Out", "Quint", 0.5)
+
+	local gamedetectedD = GameName_2
+
+
+	local function typewrite(object,text)
+		for i = 1, #text,1 do
+			object.Text = string.sub(text, 1, i)
+
+			wait(0.1)
+		end
+	end
+
+	typewrite(gamedetectedD, "Game Detected ! (Da Hood)")
+	wait(3)
+	GameDetection:Destroy()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Nexkxs/DHF/main/DaHoodFucker", true))()
+end
